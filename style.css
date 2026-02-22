@@ -73,3 +73,19 @@ p {
     overflow-wrap: break-word;
   }
 }
+
+/* Larger desktop breakpoint to match 1440px design target */
+@media (min-width: 1440px) {
+  .card {
+    max-width: 720px;
+    padding: 2.5rem;
+  }
+  /* Aim for h2 ≈ 2 lines on wide desktop */
+  .content h2 {
+    max-width: 40ch;
+  }
+  /* Aim for p ≈ 3 lines on wide desktop */
+  .content p {
+    max-width: 66ch;
+  }
+}
