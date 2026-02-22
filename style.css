@@ -1,36 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  min-height: 100vh;
   background-color: hsl(212, 45%, 89%);
 }
 
 .card {
   background-color: white;
-  max-width: 320px;
+  width: 90%;
+  max-width: 375px;
   border-radius: 10px;
-  padding: 15px;
+  padding: 1rem 1.25rem;
   text-align: center;
-  padding-bottom: 20px;
+  margin: 1.5rem auto;
 }
 
 .card img {
   width: 100%;
   border-radius: 10px;
 }
+
 h2 {
-  margin: 20px 0 15px 0;
-  font-size: 25px;
+  margin: 1.25rem 0 0.9rem 0;
+  font-size: 1.6rem;
 }
+
 p {
   color: hsl(216, 15%, 48%);
-  font-size: 15px;
-  padding: 0 29px;
+  font-size: 0.9375rem; /* 15px */
+  padding: 0 1.8rem;
   line-height: 1.4;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -39,3 +47,29 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
+@media (min-width: 1024px) {
+  .card {
+    max-width: 520px;
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+  /* Force approximate line counts for desktop: h2 ~2 lines, p ~3 lines */
+  .content h2 {
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+  }
+  .content p {
+    max-width: 54ch;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+  }
+}
